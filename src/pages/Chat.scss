@@ -1,0 +1,20 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.topbar-container {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  flex-basis: 54px;
+}
+.message-container {
+  flex: 1;
+  overflow-y: scroll;
+}
+.message-input-container {
+  flex-shrink: 0;
+  flex-basis: 54px;
+}

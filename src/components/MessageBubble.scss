@@ -1,0 +1,13 @@
+.message {
+  display: flex;
+
+  &.user {
+    justify-content: flex-end;
+  }
+  &.system {
+    justify-content: flex-start;
+  }
+  .bubble {
+    max-width: 80%;
+  }
+}
