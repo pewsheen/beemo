@@ -1,6 +1,9 @@
 .navbar {
   .nav-form {
-    width: 100%;
+    flex: 1;
     gap: 4px;
+  }
+  .close-button {
+    margin-left: 8px;
   }
 }

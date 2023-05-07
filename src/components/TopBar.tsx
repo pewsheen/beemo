@@ -1,9 +1,18 @@
-import { Container, Form, InputGroup, Navbar } from 'solid-bootstrap';
+import {
+  CloseButton,
+  Container,
+  Form,
+  InputGroup,
+  Navbar,
+} from 'solid-bootstrap';
 import LanguageSelector from '../store/language';
 import ToneSelector from '../store/tone';
 import './TopBar.scss';
+import { useNavigate } from '@solidjs/router';
 
 export default function TopBar() {
+  const navigate = useNavigate();
+
   const [tone, setTone] = ToneSelector;
   const onToneChange = (e: Event) => {
     setTone(e.currentTarget?.value);
@@ -16,9 +25,14 @@ export default function TopBar() {
     console.debug('lang', lang());
   };
 
+  const onClickClose = () => {
+    localStorage.removeItem('apiKey');
+    navigate('/setup', { replace: true });
+  };
+
   return (
-    <Navbar class="top-bar" bg='light' expand='lg'>
-      <Container fluid>
+    <Navbar class='top-bar' bg='light' expand='lg'>
+      <Container class='d-flex' fluid>
         <Form class='d-flex nav-form'>
           <InputGroup>
             <InputGroup.Text>Lang</InputGroup.Text>
@@ -36,6 +50,7 @@ export default function TopBar() {
             </Form.Select>
           </InputGroup>
         </Form>
+        <CloseButton class='close-button' onClick={onClickClose} />
       </Container>
     </Navbar>
   );
