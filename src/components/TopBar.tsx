@@ -1,3 +1,4 @@
+import { useNavigate } from '@solidjs/router';
 import {
   CloseButton,
   Container,
@@ -8,7 +9,6 @@ import {
 import LanguageSelector from '../store/language';
 import ToneSelector from '../store/tone';
 import './TopBar.scss';
-import { useNavigate } from '@solidjs/router';
 
 export default function TopBar() {
   const navigate = useNavigate();
@@ -26,7 +26,6 @@ export default function TopBar() {
   };
 
   const onClickClose = () => {
-    localStorage.removeItem('apiKey');
     navigate('/setup', { replace: true });
   };
 

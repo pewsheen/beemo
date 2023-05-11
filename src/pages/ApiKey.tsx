@@ -7,7 +7,7 @@ import './ApiKey.scss';
 export default function ApiKey() {
   const navigate = useNavigate();
 
-  const [apiKey, setApiKey] = createSignal('');
+  const [apiKey, setApiKey] = createSignal(window.localStorage.getItem('apiKey') ?? '');
   const [isKeyValid, setIsKeyValid] = createSignal(true);
 
   const setinput = (v: any) => {
