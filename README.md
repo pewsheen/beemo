@@ -1,5 +1,7 @@
 # Beemo
 
+<img src="https://github.com/pewsheen/beemo/assets/460329/69a1e54f-7967-44a4-86bc-1c0e9a6e7236" width="250px" />
+
 A ChatGPT translator.
 
 This project is using [Tauri](https://tauri.app) to build a universal application for Windows, Linux, MacOS and iOS.
