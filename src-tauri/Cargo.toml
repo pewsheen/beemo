@@ -13,7 +13,7 @@ edition = "2021"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
-tauri-build = { features = [], version = "2.0.0-alpha.3" }
+tauri-build = { features = [], version = "2.0.0-alpha.4" }
 
 [dependencies]
 tauri = { version = "2.0.0-alpha.8", features = ["shell-open"] }
